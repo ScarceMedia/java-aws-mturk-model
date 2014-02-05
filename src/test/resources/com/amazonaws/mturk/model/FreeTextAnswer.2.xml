@@ -1,0 +1,7 @@
+<FreeTextAnswer xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Constraints>
+    <Length minLength="2" />
+    <AnswerFormatRegex regex="\S" errorText="The content cannot be blank."/>
+  </Constraints>
+</FreeTextAnswer>
+       

@@ -1,0 +1,8 @@
+<FreeTextAnswer xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Constraints>
+    <AnswerFormatRegex 
+     regex="^(1[- ]?)?(\([2-9]\d{2}\)\s*|[2-9]\d{2}-?)[2-9]\d{2}-?\d{4}$)" 
+     errorText="You must enter a US phone number in the format  1-555-555-1234 or 555-555-1234."/>
+  </Constraints>
+</FreeTextAnswer>
+    

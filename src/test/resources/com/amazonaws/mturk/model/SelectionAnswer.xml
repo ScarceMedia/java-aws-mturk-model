@@ -1,0 +1,21 @@
+<SelectionAnswer xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <StyleSuggestion>radiobutton</StyleSuggestion>
+  <Selections>
+    <Selection>
+      <SelectionIdentifier>C1</SelectionIdentifier>
+      <Text>C1 (northeast)</Text>
+    </Selection>
+    <Selection>
+      <SelectionIdentifier>C2</SelectionIdentifier>
+      <Text>C2 (east)</Text>
+    </Selection>
+    <Selection>
+      <SelectionIdentifier>A3</SelectionIdentifier>
+      <Text>A3 (southwest)</Text>
+    </Selection>
+    <Selection>
+      <SelectionIdentifier>C3</SelectionIdentifier>
+      <Text>C3 (southeast)</Text>
+    </Selection>
+  </Selections>  
+</SelectionAnswer>

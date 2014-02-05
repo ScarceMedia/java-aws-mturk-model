@@ -1,0 +1,14 @@
+<EmbeddedBinary xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <EmbeddedMimeType>
+    <Type>image</Type>
+    <SubType>gif</SubType>
+  </EmbeddedMimeType>
+  <DataURL>http://tictactoe.amazon.com/game/01523/board.gif</DataURL>
+  <AltText>The game board, with "X" to move.</AltText>
+  <Width>400</Width>
+  <Height>300</Height>
+  <ApplicationParameter>
+    <Name>game_id</Name>
+    <Value>01523</Value>
+  </ApplicationParameter>
+</EmbeddedBinary>

@@ -1,0 +1,11 @@
+<Application xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Flash>
+    <FlashMovieURL>http://tictactoe.amazon.com/applets/</FlashMovieURL>
+    <Width>400</Width>
+    <Height>300</Height>
+    <ApplicationParameter>
+      <Name>game_id</Name>
+      <Value>01523</Value>
+    </ApplicationParameter>
+  </Flash>
+</Application>

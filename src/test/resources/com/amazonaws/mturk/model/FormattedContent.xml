@@ -1,0 +1,1 @@
+<FormattedContent xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd"><![CDATA[<p>This is a paragraph with <b>bold text</b>,<i>italic text</i>, and <b><i>bold italic text</i></b>.</p>]]></FormattedContent>

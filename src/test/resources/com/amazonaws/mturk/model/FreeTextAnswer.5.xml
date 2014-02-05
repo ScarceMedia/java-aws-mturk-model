@@ -1,0 +1,6 @@
+<FreeTextAnswer xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Constraints>
+    <AnswerFormatRegex regex="^[12][0-9]{3}-[01]?\d-[0-3]?\d$" 
+     errorText="You must enter a date with the format yyyy-mm-dd."/>    
+  </Constraints>
+</FreeTextAnswer>

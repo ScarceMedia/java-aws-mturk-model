@@ -1,0 +1,4 @@
+<List xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <ListItem>It must be a valid move.</ListItem>
+  <ListItem>"X" cannot resign.</ListItem>
+</List>

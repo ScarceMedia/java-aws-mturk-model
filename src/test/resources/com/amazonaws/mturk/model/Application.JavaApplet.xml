@@ -1,0 +1,12 @@
+<Application xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <JavaApplet>
+    <AppletPath>http://tictactoe.amazon.com/applets/</AppletPath>
+    <AppletFilename>GameViewer.class</AppletFilename>
+    <Width>400</Width>
+    <Height>300</Height>
+    <ApplicationParameter>
+      <Name>game_id</Name>
+      <Value>01523</Value>
+    </ApplicationParameter>
+  </JavaApplet>
+</Application>

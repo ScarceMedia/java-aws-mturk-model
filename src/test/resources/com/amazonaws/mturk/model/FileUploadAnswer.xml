@@ -1,0 +1,4 @@
+<FileUploadAnswer xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <MaxFileSizeInBytes>3000000</MaxFileSizeInBytes>
+  <MinFileSizeInBytes>1000</MinFileSizeInBytes>
+</FileUploadAnswer>

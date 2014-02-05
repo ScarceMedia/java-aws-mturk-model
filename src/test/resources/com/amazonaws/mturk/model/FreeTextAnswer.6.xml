@@ -1,0 +1,6 @@
+<FreeTextAnswer xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Constraints>
+    <AnswerFormatRegex regex="regex" flags="i"
+     errorText="You must enter 'regex'."/>    
+  </Constraints>
+</FreeTextAnswer>

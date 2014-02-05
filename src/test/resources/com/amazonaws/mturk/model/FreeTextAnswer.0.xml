@@ -1,0 +1,6 @@
+<FreeTextAnswer xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Constraints>
+    <IsNumeric minValue="100" maxValue="999"/>
+    <Length minLength="3" maxLength="3"/>
+  </Constraints>
+</FreeTextAnswer>
