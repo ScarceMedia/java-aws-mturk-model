@@ -1,0 +1,10 @@
+<QuestionFormAnswers xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionFormAnswers.xsd">
+  <Answer>
+    <QuestionIdentifier>nextmove</QuestionIdentifier>
+    <FreeText>C3</FreeText>
+  </Answer>
+  <Answer>
+    <QuestionIdentifier>likelytowin</QuestionIdentifier>
+    <SelectionIdentifier>notlikely</SelectionIdentifier>
+  </Answer>
+</QuestionFormAnswers>
