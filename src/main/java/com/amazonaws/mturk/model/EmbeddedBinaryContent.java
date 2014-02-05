@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 @XmlRootElement(name = "EmbeddedBinary", namespace = QuestionForm.NS)
 public class EmbeddedBinaryContent extends Content {

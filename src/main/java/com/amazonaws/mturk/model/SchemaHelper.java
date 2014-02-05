@@ -16,7 +16,7 @@ import org.xml.sax.SAXException;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 class SchemaHelper {
 

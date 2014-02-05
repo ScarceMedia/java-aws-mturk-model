@@ -18,7 +18,7 @@ import javax.xml.bind.Unmarshaller;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 class SerializationHelper {
 

@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 public class JavaAppletApplication extends Application {
   @XmlElement(name = "AppletPath", namespace = QuestionForm.NS)

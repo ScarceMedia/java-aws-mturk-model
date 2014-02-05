@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 public class Application {
   @XmlElement(name = "Width", namespace = QuestionForm.NS)

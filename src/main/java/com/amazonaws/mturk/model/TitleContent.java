@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 @XmlRootElement(name = "Title", namespace = QuestionForm.NS)
 public class TitleContent extends Content {

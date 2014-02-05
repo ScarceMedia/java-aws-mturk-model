@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 @XmlRootElement(name = "FreeTextAnswer", namespace = QuestionForm.NS)
 public class FreeTextAnswer extends Answer {

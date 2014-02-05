@@ -8,7 +8,7 @@ package com.amazonaws.mturk.model;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 public class Constraint {
   

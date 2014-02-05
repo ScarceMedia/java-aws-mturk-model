@@ -11,7 +11,7 @@ import org.junit.Test;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 public class ApplicationContentTest extends BaseTest {
 

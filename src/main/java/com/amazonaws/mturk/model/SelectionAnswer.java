@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 @XmlRootElement(name = "SelectionAnswer", namespace = QuestionForm.NS)
 public class SelectionAnswer extends Answer {

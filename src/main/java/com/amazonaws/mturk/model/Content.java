@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlValue;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 public abstract class Content {
 

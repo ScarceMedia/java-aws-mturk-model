@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 @XmlRootElement(name="QuestionFormAnswers", namespace = QuestionFormAnswers.NS)
 public class QuestionFormAnswers {

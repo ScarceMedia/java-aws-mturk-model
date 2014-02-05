@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlElements;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 public class Question {
 

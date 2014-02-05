@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 @XmlRootElement(name = "AnswerFormatRegex", namespace = QuestionForm.NS)
 public class AnswerFormatRegexConstraint extends Constraint {

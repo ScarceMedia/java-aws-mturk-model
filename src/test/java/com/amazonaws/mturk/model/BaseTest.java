@@ -11,7 +11,7 @@ import org.junit.Assert;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 public abstract class BaseTest {
 

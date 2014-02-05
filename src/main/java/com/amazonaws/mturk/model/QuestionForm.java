@@ -24,7 +24,7 @@ import org.xml.sax.SAXException;
 
 /**
  *
- * @author jeremy
+ * @author Jeremy Custenborder
  */
 @XmlRootElement(name = "QuestionForm", namespace = QuestionForm.NS)
 public class QuestionForm {
