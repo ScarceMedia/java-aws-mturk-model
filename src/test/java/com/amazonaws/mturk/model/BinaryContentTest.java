@@ -17,14 +17,12 @@ public class BinaryContentTest extends BaseTest {
 
   @Test
   public void test() throws IOException {
-    BinaryContent expected = loadResource("BinaryContent.xml", BinaryContent.class);
-    Assert.assertNotNull(expected.mimeType);
-    Assert.assertEquals("image", expected.mimeType.type);
-    Assert.assertEquals("gif", expected.mimeType.subType);
-    Assert.assertEquals("http://tictactoe.amazon.com/game/01523/board.gif", expected.dataURL);   
-    Assert.assertEquals("The game board, with \"X\" to move.", expected.altText);
-
-
+    BinaryContent actual = loadResource("BinaryContent.xml", BinaryContent.class);
+    Assert.assertNotNull(actual.mimeType);
+    Assert.assertEquals("image", actual.mimeType.type);
+    Assert.assertEquals("gif", actual.mimeType.subType);
+    Assert.assertEquals("http://tictactoe.amazon.com/game/01523/board.gif", actual.dataURL);   
+    Assert.assertEquals("The game board, with \"X\" to move.", actual.altText);
   }
 
 }

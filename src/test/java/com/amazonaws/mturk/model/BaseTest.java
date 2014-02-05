@@ -8,7 +8,6 @@ package com.amazonaws.mturk.model;
 import java.io.IOException;
 import java.io.InputStream;
 import org.junit.Assert;
-import org.junit.Test;
 
 /**
  *

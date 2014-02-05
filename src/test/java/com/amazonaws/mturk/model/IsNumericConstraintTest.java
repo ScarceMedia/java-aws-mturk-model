@@ -14,8 +14,10 @@ import org.junit.Test;
  *
  * @author jeremy
  */
-public class IsNumericConstraintTest {
+public class IsNumericConstraintTest extends BaseTest {
+
   IsNumericConstraint constraint;
+
   @Before
   public void setup() {
     SerializationHelper.FORMAT_OUTPUT = false;
@@ -23,10 +25,10 @@ public class IsNumericConstraintTest {
   }
 
   @Test
-  public void test() throws IOException{
+  public void test() throws IOException {
     SerializationHelper.save(constraint, System.out);
-    
-    final String expected ="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><IsNumeric xmlns=\"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd\"/>";
+
+    final String expected = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><IsNumeric xmlns=\"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd\"/>";
     String actual = SerializationHelper.toString(constraint);
 
     Assert.assertEquals(expected, actual);

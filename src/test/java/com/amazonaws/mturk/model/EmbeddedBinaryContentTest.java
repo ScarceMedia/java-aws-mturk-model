@@ -17,18 +17,17 @@ public class EmbeddedBinaryContentTest extends BaseTest {
 
   @Test
   public void test() throws IOException {
-    EmbeddedBinaryContent expected = loadResource("EmbeddedBinaryContent.xml", EmbeddedBinaryContent.class);
-    Assert.assertNotNull(expected.mimeType);
-    Assert.assertEquals("image", expected.mimeType.type);
-    Assert.assertEquals("gif", expected.mimeType.subType);
-    Assert.assertEquals("http://tictactoe.amazon.com/game/01523/board.gif", expected.dataURL);   
-    Assert.assertEquals("The game board, with \"X\" to move.", expected.altText);
-    Assert.assertEquals("400", expected.width);
-    Assert.assertEquals("300", expected.height);
-    Assert.assertNotNull(expected.applicationParameters);
-    Assert.assertEquals("game_id", expected.applicationParameters.get(0).name);
-    Assert.assertEquals("01523", expected.applicationParameters.get(0).value);
-
+    EmbeddedBinaryContent actual = loadResource("EmbeddedBinaryContent.xml", EmbeddedBinaryContent.class);
+    Assert.assertNotNull(actual.mimeType);
+    Assert.assertEquals("image", actual.mimeType.type);
+    Assert.assertEquals("gif", actual.mimeType.subType);
+    Assert.assertEquals("http://tictactoe.amazon.com/game/01523/board.gif", actual.dataURL);   
+    Assert.assertEquals("The game board, with \"X\" to move.", actual.altText);
+    Assert.assertEquals("400", actual.width);
+    Assert.assertEquals("300", actual.height);
+    Assert.assertNotNull(actual.applicationParameters);
+    Assert.assertEquals("game_id", actual.applicationParameters.get(0).name);
+    Assert.assertEquals("01523", actual.applicationParameters.get(0).value);
   }
 
 }

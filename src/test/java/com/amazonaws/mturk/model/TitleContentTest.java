@@ -14,13 +14,10 @@ import org.junit.Test;
  * @author jeremy
  */
 public class TitleContentTest extends BaseTest {
-
-
-
   @Test
   public void test() throws IOException {
-    TitleContent expected = loadResource("TitleContent.xml", TitleContent.class);
-    Assert.assertEquals("value does not match", "The Next Move", expected.value);
+    TitleContent actual = loadResource("TitleContent.xml", TitleContent.class);
+    Assert.assertEquals("value does not match", "The Next Move", actual.value);
   }
 
 }

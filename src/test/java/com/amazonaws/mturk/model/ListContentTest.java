@@ -17,11 +17,10 @@ public class ListContentTest extends BaseTest {
 
   @Test
   public void test() throws IOException {
-    ListContent expected = loadResource("ListContent.xml", ListContent.class);
-    Assert.assertNotNull(expected.list);
-    Assert.assertEquals("It must be a valid move.", expected.list.get(0));
-    Assert.assertEquals("\"X\" cannot resign.", expected.list.get(1));
-
+    ListContent actual = loadResource("ListContent.xml", ListContent.class);
+    Assert.assertNotNull(actual.list);
+    Assert.assertEquals("It must be a valid move.", actual.list.get(0));
+    Assert.assertEquals("\"X\" cannot resign.", actual.list.get(1));
   }
 
 }

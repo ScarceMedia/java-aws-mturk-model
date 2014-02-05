@@ -20,8 +20,6 @@ public class QuestionFormAnswersTest extends BaseTest {
     QuestionFormAnswers actual = loadResource("QuestionFormAnswers.xml", QuestionFormAnswers.class);
     Assert.assertNotNull(actual.answers);
     Assert.assertEquals(2, actual.answers.size());
-    
-    
   }
 
 }

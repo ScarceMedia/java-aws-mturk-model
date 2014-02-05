@@ -16,7 +16,7 @@ import org.xml.sax.SAXException;
  *
  * @author jeremy
  */
-public class QuestionFormTest {
+public class QuestionFormTest extends BaseTest {
   
   @Before
   public void setup(){
@@ -42,12 +42,8 @@ public class QuestionFormTest {
     
     form.overview.add(binaryContent);
     form.overview.add(new TextContent("Player \"X\" has the next move."));
-    
-    
-//    form.setOverview(content);
-    
-    QuestionForm.save(form, System.out);
-    
+
+    QuestionForm.save(form, System.out);    
   }
   
   @Test
