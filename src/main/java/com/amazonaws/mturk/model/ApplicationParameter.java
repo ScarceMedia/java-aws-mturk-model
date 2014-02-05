@@ -7,6 +7,7 @@ package com.amazonaws.mturk.model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -20,4 +21,23 @@ public class ApplicationParameter {
   @XmlElement(name = "Value", namespace = QuestionForm.NS)
   String value;
 
+  @XmlTransient
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  @XmlTransient
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+  
 }

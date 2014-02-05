@@ -9,16 +9,27 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
-@XmlRootElement(name="QuestionFormAnswers", namespace = QuestionFormAnswers.NS)
+@XmlRootElement(name = "QuestionFormAnswers", namespace = QuestionFormAnswers.NS)
 public class QuestionFormAnswers {
 
   public static final String NS = "http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionFormAnswers.xsd";
-  
-  @XmlElement(name="Answer", namespace = QuestionFormAnswers.NS)
+
+  @XmlElement(name = "Answer", namespace = QuestionFormAnswers.NS)
   List<Answer> answers = new ArrayList<Answer>();
+
+  @XmlTransient
+  public List<Answer> getAnswers() {
+    return answers;
+  }
+
+  public void setAnswers(List<Answer> answers) {
+    this.answers = answers;
+  }
+
 }

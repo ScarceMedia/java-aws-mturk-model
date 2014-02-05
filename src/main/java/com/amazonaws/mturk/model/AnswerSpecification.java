@@ -8,6 +8,7 @@ package com.amazonaws.mturk.model;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -24,4 +25,14 @@ public class AnswerSpecification {
   })
   Answer answer;
 
+  @XmlTransient
+  public Answer getAnswer() {
+    return answer;
+  }
+
+  public void setAnswer(Answer answer) {
+    this.answer = answer;
+  }
+
+  
 }

@@ -7,6 +7,7 @@ package com.amazonaws.mturk.model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -20,4 +21,23 @@ public class ApplicationContent {
   @XmlElement(name = "Flash", namespace = QuestionForm.NS)
   FlashApplication flashApplication;
 
+  @XmlTransient
+  public FlashApplication getFlashApplication() {
+    return flashApplication;
+  }
+
+  public void setFlashApplication(FlashApplication flashApplication) {
+    this.flashApplication = flashApplication;
+  }
+
+  @XmlTransient
+  public JavaAppletApplication getJavaAppletApplication() {
+    return javaAppletApplication;
+  }
+
+  public void setJavaAppletApplication(JavaAppletApplication javaAppletApplication) {
+    this.javaAppletApplication = javaAppletApplication;
+  }
+
+  
 }

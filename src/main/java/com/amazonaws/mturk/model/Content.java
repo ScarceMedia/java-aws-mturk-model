@@ -5,6 +5,7 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlValue;
 
 /**
@@ -15,4 +16,15 @@ public abstract class Content {
 
   @XmlValue
   String value;
+
+  @XmlTransient
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+  
+  
 }

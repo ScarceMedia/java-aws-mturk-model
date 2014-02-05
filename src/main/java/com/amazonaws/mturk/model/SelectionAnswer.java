@@ -7,6 +7,7 @@ package com.amazonaws.mturk.model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -33,4 +34,41 @@ public class SelectionAnswer extends Answer {
     combobox,
     multichooser,
   }
+
+  @XmlTransient
+  public Integer getMinSelectionCount() {
+    return minSelectionCount;
+  }
+
+  public void setMinSelectionCount(Integer minSelectionCount) {
+    this.minSelectionCount = minSelectionCount;
+  }
+
+  @XmlTransient
+  public Integer getMaxSelectionCount() {
+    return maxSelectionCount;
+  }
+
+  public void setMaxSelectionCount(Integer maxSelectionCount) {
+    this.maxSelectionCount = maxSelectionCount;
+  }
+
+  @XmlTransient
+  public StyleSuggestionType getStyleSuggestion() {
+    return styleSuggestion;
+  }
+
+  public void setStyleSuggestion(StyleSuggestionType styleSuggestion) {
+    this.styleSuggestion = styleSuggestion;
+  }
+
+  @XmlTransient
+  public Selections getSelections() {
+    return selections;
+  }
+
+  public void setSelections(Selections selections) {
+    this.selections = selections;
+  }
+
 }

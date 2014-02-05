@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -29,4 +30,59 @@ public class EmbeddedBinaryContent extends Content {
   String height;
   @XmlElement(name = "ApplicationParameter", namespace = QuestionForm.NS)
   List<ApplicationParameter> applicationParameters = new ArrayList<ApplicationParameter>();
+
+  @XmlTransient
+  public String getAltText() {
+    return altText;
+  }
+
+  public void setAltText(String altText) {
+    this.altText = altText;
+  }
+
+  @XmlTransient
+  public List<ApplicationParameter> getApplicationParameters() {
+    return applicationParameters;
+  }
+
+  public void setApplicationParameters(List<ApplicationParameter> applicationParameters) {
+    this.applicationParameters = applicationParameters;
+  }
+
+  @XmlTransient
+  public String getDataURL() {
+    return dataURL;
+  }
+
+  public void setDataURL(String dataURL) {
+    this.dataURL = dataURL;
+  }
+
+  @XmlTransient
+  public String getHeight() {
+    return height;
+  }
+
+  public void setHeight(String height) {
+    this.height = height;
+  }
+
+  @XmlTransient
+  public MimeType getMimeType() {
+    return mimeType;
+  }
+
+  public void setMimeType(MimeType mimeType) {
+    this.mimeType = mimeType;
+  }
+
+  @XmlTransient
+  public String getWidth() {
+    return width;
+  }
+
+  public void setWidth(String width) {
+    this.width = width;
+  }
+
 }

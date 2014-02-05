@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -22,4 +23,23 @@ public class Selections {
 
   @XmlElement(name = "OtherSelection", namespace = QuestionForm.NS)
   FreeTextAnswer otherSelection;
+
+  @XmlTransient
+  public List<Selection> getSelections() {
+    return selections;
+  }
+
+  public void setSelections(List<Selection> selections) {
+    this.selections = selections;
+  }
+
+  @XmlTransient
+  public FreeTextAnswer getOtherSelection() {
+    return otherSelection;
+  }
+
+  public void setOtherSelection(FreeTextAnswer otherSelection) {
+    this.otherSelection = otherSelection;
+  }
+
 }

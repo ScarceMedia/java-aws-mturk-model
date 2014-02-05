@@ -7,6 +7,7 @@ package com.amazonaws.mturk.model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -26,6 +27,24 @@ public class MimeType {
 
   public MimeType(String type, String subType) {
     this.type = type;
+    this.subType = subType;
+  }
+
+  @XmlTransient
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
+  @XmlTransient
+  public String getSubType() {
+    return subType;
+  }
+
+  public void setSubType(String subType) {
     this.subType = subType;
   }
 

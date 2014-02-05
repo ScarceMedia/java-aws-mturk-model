@@ -3,21 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.amazonaws.mturk.model;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
-@XmlRootElement(name="List", namespace=QuestionForm.NS)
+@XmlRootElement(name = "List", namespace = QuestionForm.NS)
 public class ListContent extends Content {
 //  @XmlElementWrapper(name = "List", namespace = QuestionForm.NS)
+
   @XmlElement(name = "ListItem", namespace = QuestionForm.NS)
-  List<String> list = new ArrayList<String>();  
+  List<String> list = new ArrayList<String>();
+
+  @XmlTransient
+  public List<String> getList() {
+    return list;
+  }
+
+  public void setList(List<String> list) {
+    this.list = list;
+  }
+
 }

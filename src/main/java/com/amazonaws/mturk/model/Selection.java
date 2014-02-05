@@ -8,6 +8,7 @@ package com.amazonaws.mturk.model;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -26,4 +27,23 @@ public class Selection {
 
   })
   Content content;
+
+  @XmlTransient
+  public Content getContent() {
+    return content;
+  }
+
+  public void setContent(Content content) {
+    this.content = content;
+  }
+
+  @XmlTransient
+  public String getSelectionIdentifier() {
+    return selectionIdentifier;
+  }
+
+  public void setSelectionIdentifier(String selectionIdentifier) {
+    this.selectionIdentifier = selectionIdentifier;
+  }
+
 }

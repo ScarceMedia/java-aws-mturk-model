@@ -7,6 +7,7 @@ package com.amazonaws.mturk.model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -21,4 +22,41 @@ public class BinaryContent extends Content {
   String dataURL;
   @XmlElement(name = "AltText", namespace = QuestionForm.NS)
   String altText;
+
+  @XmlTransient
+  public String getAltText() {
+    return altText;
+  }
+
+  public void setAltText(String altText) {
+    this.altText = altText;
+  }
+
+  @XmlTransient
+  public String getDataURL() {
+    return dataURL;
+  }
+
+  public void setDataURL(String dataURL) {
+    this.dataURL = dataURL;
+  }
+
+  @XmlTransient
+  public MimeType getMimeType() {
+    return mimeType;
+  }
+
+  public void setMimeType(MimeType mimeType) {
+    this.mimeType = mimeType;
+  }
+
+  @XmlTransient
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
 }

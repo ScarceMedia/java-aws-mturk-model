@@ -10,6 +10,7 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlElements;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -35,7 +36,44 @@ public class Question {
     @XmlElement(name = "EmbeddedBinary", namespace = QuestionForm.NS, type = EmbeddedBinaryContent.class),}
   )
   List<Content> questionContent = new ArrayList<Content>();
-  
+
   @XmlElement(name = "AnswerSpecification", namespace = QuestionForm.NS)
   AnswerSpecification answerSpecification;
+
+  @XmlTransient
+  public String getQuestionIdentifier() {
+    return questionIdentifier;
+  }
+
+  public void setQuestionIdentifier(String questionIdentifier) {
+    this.questionIdentifier = questionIdentifier;
+  }
+
+  @XmlTransient
+  public List<Content> getQuestionContent() {
+    return questionContent;
+  }
+
+  public void setQuestionContent(List<Content> questionContent) {
+    this.questionContent = questionContent;
+  }
+
+  @XmlTransient
+  public AnswerSpecification getAnswerSpecification() {
+    return answerSpecification;
+  }
+
+  public void setAnswerSpecification(AnswerSpecification answerSpecification) {
+    this.answerSpecification = answerSpecification;
+  }
+
+  @XmlTransient
+  public String getDisplayName() {
+    return displayName;
+  }
+
+  public void setDisplayName(String displayName) {
+    this.displayName = displayName;
+  }
+
 }

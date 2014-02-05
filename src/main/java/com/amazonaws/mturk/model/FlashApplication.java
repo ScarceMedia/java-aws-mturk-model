@@ -6,6 +6,7 @@
 package com.amazonaws.mturk.model;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -16,4 +17,14 @@ public class FlashApplication extends Application {
   @XmlElement(name = "FlashMovieURL", namespace = QuestionForm.NS)
   String flashMovieURL;
 
+  @XmlTransient
+  public String getFlashMovieURL() {
+    return flashMovieURL;
+  }
+
+  public void setFlashMovieURL(String flashMovieURL) {
+    this.flashMovieURL = flashMovieURL;
+  }
+
+  
 }

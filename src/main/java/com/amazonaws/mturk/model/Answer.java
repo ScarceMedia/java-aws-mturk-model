@@ -6,6 +6,7 @@
 package com.amazonaws.mturk.model;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -26,14 +27,65 @@ public class Answer {
   @XmlElement(name = "UploadedFileKey", namespace = QuestionFormAnswers.NS)
   String uploadedFileKey;
 
-//                                 <xs:sequence>
-//                                    <xs:element name="SelectionIdentifier" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-//                                    <xs:element name="OtherSelectionText" type="xs:string" minOccurs="0"/>
-//                                </xs:sequence>
-//                                <xs:element name="FreeText" type="xs:string"/>
-//                                <xs:sequence>
-//                                    <xs:element name="UploadedFileSizeInBytes" type="xs:positiveInteger"/>
-//                                    <xs:element name="UploadedFileKey" type="xs:string"/>
-//                                </xs:sequence
-//                                        >
+  @XmlTransient
+  public String getQuestionIdentifier() {
+    return questionIdentifier;
+  }
+
+  public void setQuestionIdentifier(String questionIdentifier) {
+    this.questionIdentifier = questionIdentifier;
+  }
+
+  @XmlTransient
+  public String getSelectionIdentifier() {
+    return selectionIdentifier;
+  }
+
+  public void setSelectionIdentifier(String selectionIdentifier) {
+    this.selectionIdentifier = selectionIdentifier;
+  }
+
+  @XmlTransient
+  public String getOtherSelectionText() {
+    return otherSelectionText;
+  }
+
+  public void setOtherSelectionText(String otherSelectionText) {
+    this.otherSelectionText = otherSelectionText;
+  }
+
+  @XmlTransient
+  public String getFreeText() {
+    return freeText;
+  }
+
+  public void setFreeText(String freeText) {
+    this.freeText = freeText;
+  }
+
+  @XmlTransient
+  public String getUploadedFileKey() {
+    return uploadedFileKey;
+  }
+
+  public void setUploadedFileKey(String uploadedFileKey) {
+    this.uploadedFileKey = uploadedFileKey;
+  }
+
+  @XmlTransient
+  public Integer getUploadedFileSizeInBytes() {
+    return uploadedFileSizeInBytes;
+  }
+
+  public void setUploadedFileSizeInBytes(Integer uploadedFileSizeInBytes) {
+    this.uploadedFileSizeInBytes = uploadedFileSizeInBytes;
+  }
+  
+  
+  
+
+  
+  
+  
+  
 }

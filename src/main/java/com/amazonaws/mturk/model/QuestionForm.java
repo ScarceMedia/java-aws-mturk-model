@@ -8,18 +8,17 @@ package com.amazonaws.mturk.model;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import org.xml.sax.SAXException;
 
 /**
@@ -45,6 +44,24 @@ public class QuestionForm {
 
   @XmlElement(name = "Question", namespace = QuestionForm.NS)
   List<Question> questions = new ArrayList<Question>();
+
+  @XmlTransient
+  public List<Content> getOverview() {
+    return overview;
+  }
+
+  public void setOverview(List<Content> overview) {
+    this.overview = overview;
+  }
+
+  @XmlTransient
+  public List<Question> getQuestions() {
+    return questions;
+  }
+
+  public void setQuestions(List<Question> questions) {
+    this.questions = questions;
+  }
 
   public static QuestionForm
           load(InputStream input) throws IOException {
