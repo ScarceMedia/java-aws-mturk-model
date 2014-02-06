@@ -5,16 +5,18 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "AnswerFormatRegex", namespace = QuestionForm.NS)
-public class AnswerFormatRegexConstraint extends Constraint {
+public class AnswerFormatRegexConstraint implements Constraint {
 
   @XmlAttribute(name = "regex", required = true)
   String regex;
@@ -23,7 +25,6 @@ public class AnswerFormatRegexConstraint extends Constraint {
   @XmlAttribute(name = "flags", required = false)
   String flags;
 
-  @XmlTransient
   public String getErrorText() {
     return errorText;
   }
@@ -32,7 +33,6 @@ public class AnswerFormatRegexConstraint extends Constraint {
     this.errorText = errorText;
   }
 
-  @XmlTransient
   public String getFlags() {
     return flags;
   }
@@ -41,7 +41,6 @@ public class AnswerFormatRegexConstraint extends Constraint {
     this.flags = flags;
   }
 
-  @XmlTransient
   public String getRegex() {
     return regex;
   }

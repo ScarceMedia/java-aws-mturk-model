@@ -10,6 +10,6 @@ package com.amazonaws.mturk.model;
  *
  * @author Jeremy Custenborder
  */
-public class Constraint {
+public interface Constraint {
   
 }

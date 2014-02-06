@@ -7,14 +7,16 @@ package com.amazonaws.mturk.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Selections", namespace = QuestionForm.NS)
 public class Selections {
 
@@ -24,7 +26,6 @@ public class Selections {
   @XmlElement(name = "OtherSelection", namespace = QuestionForm.NS)
   FreeTextAnswer otherSelection;
 
-  @XmlTransient
   public List<Selection> getSelections() {
     return selections;
   }
@@ -33,7 +34,6 @@ public class Selections {
     this.selections = selections;
   }
 
-  @XmlTransient
   public FreeTextAnswer getOtherSelection() {
     return otherSelection;
   }
@@ -41,5 +41,4 @@ public class Selections {
   public void setOtherSelection(FreeTextAnswer otherSelection) {
     this.otherSelection = otherSelection;
   }
-
 }

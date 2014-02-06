@@ -5,14 +5,16 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "MimeType", namespace = QuestionForm.NS)
 public class MimeType {
 
@@ -30,7 +32,6 @@ public class MimeType {
     this.subType = subType;
   }
 
-  @XmlTransient
   public String getType() {
     return type;
   }
@@ -39,7 +40,6 @@ public class MimeType {
     this.type = type;
   }
 
-  @XmlTransient
   public String getSubType() {
     return subType;
   }

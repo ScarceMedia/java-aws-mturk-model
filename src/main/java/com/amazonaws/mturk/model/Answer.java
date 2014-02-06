@@ -5,13 +5,17 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "answer", namespace = QuestionFormAnswers.NS)
 public class Answer {
 
   @XmlElement(name = "QuestionIdentifier", namespace = QuestionFormAnswers.NS)
@@ -27,7 +31,6 @@ public class Answer {
   @XmlElement(name = "UploadedFileKey", namespace = QuestionFormAnswers.NS)
   String uploadedFileKey;
 
-  @XmlTransient
   public String getQuestionIdentifier() {
     return questionIdentifier;
   }
@@ -36,7 +39,6 @@ public class Answer {
     this.questionIdentifier = questionIdentifier;
   }
 
-  @XmlTransient
   public String getSelectionIdentifier() {
     return selectionIdentifier;
   }
@@ -45,7 +47,6 @@ public class Answer {
     this.selectionIdentifier = selectionIdentifier;
   }
 
-  @XmlTransient
   public String getOtherSelectionText() {
     return otherSelectionText;
   }
@@ -54,7 +55,6 @@ public class Answer {
     this.otherSelectionText = otherSelectionText;
   }
 
-  @XmlTransient
   public String getFreeText() {
     return freeText;
   }
@@ -63,7 +63,6 @@ public class Answer {
     this.freeText = freeText;
   }
 
-  @XmlTransient
   public String getUploadedFileKey() {
     return uploadedFileKey;
   }
@@ -72,7 +71,6 @@ public class Answer {
     this.uploadedFileKey = uploadedFileKey;
   }
 
-  @XmlTransient
   public Integer getUploadedFileSizeInBytes() {
     return uploadedFileSizeInBytes;
   }
@@ -80,12 +78,5 @@ public class Answer {
   public void setUploadedFileSizeInBytes(Integer uploadedFileSizeInBytes) {
     this.uploadedFileSizeInBytes = uploadedFileSizeInBytes;
   }
-  
-  
-  
 
-  
-  
-  
-  
 }

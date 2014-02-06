@@ -5,13 +5,17 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "JavaApplet", namespace = QuestionForm.NS)
 public class JavaAppletApplication extends Application {
 
   @XmlElement(name = "AppletPath", namespace = QuestionForm.NS)
@@ -19,7 +23,6 @@ public class JavaAppletApplication extends Application {
   @XmlElement(name = "AppletFilename", namespace = QuestionForm.NS)
   String appletFilename;
 
-  @XmlTransient
   public String getAppletFilename() {
     return appletFilename;
   }
@@ -28,7 +31,6 @@ public class JavaAppletApplication extends Application {
     this.appletFilename = appletFilename;
   }
 
-  @XmlTransient
   public String getAppletPath() {
     return appletPath;
   }

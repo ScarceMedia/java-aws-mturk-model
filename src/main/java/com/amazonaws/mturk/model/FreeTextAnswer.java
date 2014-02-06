@@ -7,16 +7,18 @@ package com.amazonaws.mturk.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "FreeTextAnswer", namespace = QuestionForm.NS)
 public class FreeTextAnswer extends Answer {
 
@@ -32,7 +34,6 @@ public class FreeTextAnswer extends Answer {
   @XmlElement(name = "NumberOfLinesSuggestion", namespace = QuestionForm.NS)
   Integer numberOfLinesSuggestion;
 
-  @XmlTransient
   public String getDefaultText() {
     return defaultText;
   }
@@ -41,7 +42,6 @@ public class FreeTextAnswer extends Answer {
     this.defaultText = defaultText;
   }
 
-  @XmlTransient
   public Integer getNumberOfLinesSuggestion() {
     return numberOfLinesSuggestion;
   }

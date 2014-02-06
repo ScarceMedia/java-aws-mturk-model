@@ -5,23 +5,24 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Application", namespace = QuestionForm.NS)
-public class ApplicationContent {
+public class ApplicationContent implements Content {
 
   @XmlElement(name = "JavaApplet", namespace = QuestionForm.NS)
   JavaAppletApplication javaAppletApplication;
   @XmlElement(name = "Flash", namespace = QuestionForm.NS)
   FlashApplication flashApplication;
 
-  @XmlTransient
   public FlashApplication getFlashApplication() {
     return flashApplication;
   }
@@ -30,7 +31,6 @@ public class ApplicationContent {
     this.flashApplication = flashApplication;
   }
 
-  @XmlTransient
   public JavaAppletApplication getJavaAppletApplication() {
     return javaAppletApplication;
   }
@@ -39,5 +39,4 @@ public class ApplicationContent {
     this.javaAppletApplication = javaAppletApplication;
   }
 
-  
 }

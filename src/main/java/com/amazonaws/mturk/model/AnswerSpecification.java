@@ -5,15 +5,17 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "AnswerSpecification", namespace = QuestionForm.NS)
 public class AnswerSpecification {
 
@@ -25,7 +27,6 @@ public class AnswerSpecification {
   })
   Answer answer;
 
-  @XmlTransient
   public Answer getAnswer() {
     return answer;
   }
@@ -34,5 +35,4 @@ public class AnswerSpecification {
     this.answer = answer;
   }
 
-  
 }

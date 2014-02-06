@@ -5,14 +5,16 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "FileUploadAnswer", namespace = QuestionForm.NS)
 public class FileUploadAnswer extends Answer {
 
@@ -21,7 +23,6 @@ public class FileUploadAnswer extends Answer {
   @XmlElement(name = "MinFileSizeInBytes", namespace = QuestionForm.NS)
   Integer minFileSizeInBytes;
 
-  @XmlTransient
   public Integer getMaxFileSizeInBytes() {
     return maxFileSizeInBytes;
   }
@@ -30,7 +31,6 @@ public class FileUploadAnswer extends Answer {
     this.maxFileSizeInBytes = maxFileSizeInBytes;
   }
 
-  @XmlTransient
   public Integer getMinFileSizeInBytes() {
     return minFileSizeInBytes;
   }

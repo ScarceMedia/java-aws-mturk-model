@@ -7,16 +7,18 @@ package com.amazonaws.mturk.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "EmbeddedBinary", namespace = QuestionForm.NS)
-public class EmbeddedBinaryContent extends Content {
+public class EmbeddedBinaryContent implements Content {
 
   @XmlElement(name = "EmbeddedMimeType", namespace = QuestionForm.NS)
   MimeType mimeType;
@@ -31,7 +33,6 @@ public class EmbeddedBinaryContent extends Content {
   @XmlElement(name = "ApplicationParameter", namespace = QuestionForm.NS)
   List<ApplicationParameter> applicationParameters = new ArrayList<ApplicationParameter>();
 
-  @XmlTransient
   public String getAltText() {
     return altText;
   }
@@ -40,7 +41,6 @@ public class EmbeddedBinaryContent extends Content {
     this.altText = altText;
   }
 
-  @XmlTransient
   public List<ApplicationParameter> getApplicationParameters() {
     return applicationParameters;
   }
@@ -49,7 +49,6 @@ public class EmbeddedBinaryContent extends Content {
     this.applicationParameters = applicationParameters;
   }
 
-  @XmlTransient
   public String getDataURL() {
     return dataURL;
   }
@@ -58,7 +57,6 @@ public class EmbeddedBinaryContent extends Content {
     this.dataURL = dataURL;
   }
 
-  @XmlTransient
   public String getHeight() {
     return height;
   }
@@ -67,7 +65,6 @@ public class EmbeddedBinaryContent extends Content {
     this.height = height;
   }
 
-  @XmlTransient
   public MimeType getMimeType() {
     return mimeType;
   }
@@ -76,7 +73,6 @@ public class EmbeddedBinaryContent extends Content {
     this.mimeType = mimeType;
   }
 
-  @XmlTransient
   public String getWidth() {
     return width;
   }

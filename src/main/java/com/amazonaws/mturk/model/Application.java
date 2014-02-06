@@ -7,14 +7,16 @@ package com.amazonaws.mturk.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
-public class Application {
+@XmlAccessorType(XmlAccessType.FIELD)
+public abstract class Application {
 
   @XmlElement(name = "Width", namespace = QuestionForm.NS)
   String width;
@@ -23,7 +25,6 @@ public class Application {
   @XmlElement(name = "ApplicationParameter", namespace = QuestionForm.NS)
   List<ApplicationParameter> applicationParameters = new ArrayList<ApplicationParameter>();
 
-  @XmlTransient
   public List<ApplicationParameter> getApplicationParameters() {
     return applicationParameters;
   }
@@ -32,7 +33,6 @@ public class Application {
     this.applicationParameters = applicationParameters;
   }
 
-  @XmlTransient
   public String getHeight() {
     return height;
   }
@@ -41,7 +41,6 @@ public class Application {
     this.height = height;
   }
 
-  @XmlTransient
   public String getWidth() {
     return width;
   }

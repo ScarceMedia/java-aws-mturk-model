@@ -20,6 +20,7 @@ public class FormattedContentTest extends BaseTest {
   @Test
   public void test() throws IOException {
     FormattedContent actual = loadResource("FormattedContent.xml", FormattedContent.class);
+    SerializationHelper.save(actual, System.out);
     Assert.assertEquals("value does not match", "<p>This is a paragraph with <b>bold text</b>,<i>italic text</i>, and <b><i>bold italic text</i></b>.</p>", actual.value);
   }
 

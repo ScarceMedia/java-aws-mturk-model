@@ -5,15 +5,17 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Selection", namespace = QuestionForm.NS)
 public class Selection {
 
@@ -28,7 +30,6 @@ public class Selection {
   })
   Content content;
 
-  @XmlTransient
   public Content getContent() {
     return content;
   }
@@ -37,7 +38,6 @@ public class Selection {
     this.content = content;
   }
 
-  @XmlTransient
   public String getSelectionIdentifier() {
     return selectionIdentifier;
   }

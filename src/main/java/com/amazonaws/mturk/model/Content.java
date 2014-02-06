@@ -5,26 +5,10 @@
  */
 package com.amazonaws.mturk.model;
 
-import javax.xml.bind.annotation.XmlTransient;
-import javax.xml.bind.annotation.XmlValue;
-
 /**
  *
  * @author Jeremy Custenborder
  */
-public abstract class Content {
+public interface Content {
 
-  @XmlValue
-  String value;
-
-  @XmlTransient
-  public String getValue() {
-    return value;
-  }
-
-  public void setValue(String value) {
-    this.value = value;
-  }
-  
-  
 }

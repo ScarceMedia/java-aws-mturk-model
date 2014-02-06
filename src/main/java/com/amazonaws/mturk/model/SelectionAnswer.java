@@ -5,14 +5,16 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "SelectionAnswer", namespace = QuestionForm.NS)
 public class SelectionAnswer extends Answer {
 
@@ -35,7 +37,6 @@ public class SelectionAnswer extends Answer {
     multichooser,
   }
 
-  @XmlTransient
   public Integer getMinSelectionCount() {
     return minSelectionCount;
   }
@@ -44,7 +45,6 @@ public class SelectionAnswer extends Answer {
     this.minSelectionCount = minSelectionCount;
   }
 
-  @XmlTransient
   public Integer getMaxSelectionCount() {
     return maxSelectionCount;
   }
@@ -53,7 +53,6 @@ public class SelectionAnswer extends Answer {
     this.maxSelectionCount = maxSelectionCount;
   }
 
-  @XmlTransient
   public StyleSuggestionType getStyleSuggestion() {
     return styleSuggestion;
   }
@@ -62,7 +61,6 @@ public class SelectionAnswer extends Answer {
     this.styleSuggestion = styleSuggestion;
   }
 
-  @XmlTransient
   public Selections getSelections() {
     return selections;
   }

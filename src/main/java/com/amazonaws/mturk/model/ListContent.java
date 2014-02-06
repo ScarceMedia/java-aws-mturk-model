@@ -7,22 +7,23 @@ package com.amazonaws.mturk.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "List", namespace = QuestionForm.NS)
-public class ListContent extends Content {
+public class ListContent implements Content {
 //  @XmlElementWrapper(name = "List", namespace = QuestionForm.NS)
 
   @XmlElement(name = "ListItem", namespace = QuestionForm.NS)
   List<String> list = new ArrayList<String>();
 
-  @XmlTransient
   public List<String> getList() {
     return list;
   }

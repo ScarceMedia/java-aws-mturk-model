@@ -5,16 +5,18 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Binary", namespace = QuestionForm.NS)
-public class BinaryContent extends Content {
+public class BinaryContent implements Content {
 
   @XmlElement(name = "MimeType", namespace = QuestionForm.NS)
   MimeType mimeType;
@@ -23,7 +25,6 @@ public class BinaryContent extends Content {
   @XmlElement(name = "AltText", namespace = QuestionForm.NS)
   String altText;
 
-  @XmlTransient
   public String getAltText() {
     return altText;
   }
@@ -32,7 +33,6 @@ public class BinaryContent extends Content {
     this.altText = altText;
   }
 
-  @XmlTransient
   public String getDataURL() {
     return dataURL;
   }
@@ -41,7 +41,6 @@ public class BinaryContent extends Content {
     this.dataURL = dataURL;
   }
 
-  @XmlTransient
   public MimeType getMimeType() {
     return mimeType;
   }
@@ -49,14 +48,4 @@ public class BinaryContent extends Content {
   public void setMimeType(MimeType mimeType) {
     this.mimeType = mimeType;
   }
-
-  @XmlTransient
-  public String getValue() {
-    return value;
-  }
-
-  public void setValue(String value) {
-    this.value = value;
-  }
-
 }

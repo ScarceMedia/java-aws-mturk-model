@@ -14,17 +14,19 @@ import java.util.List;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlElements;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 import org.xml.sax.SAXException;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "QuestionForm", namespace = QuestionForm.NS)
 public class QuestionForm {
 
@@ -45,7 +47,6 @@ public class QuestionForm {
   @XmlElement(name = "Question", namespace = QuestionForm.NS)
   List<Question> questions = new ArrayList<Question>();
 
-  @XmlTransient
   public List<Content> getOverview() {
     return overview;
   }
@@ -54,7 +55,6 @@ public class QuestionForm {
     this.overview = overview;
   }
 
-  @XmlTransient
   public List<Question> getQuestions() {
     return questions;
   }

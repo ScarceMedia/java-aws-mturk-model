@@ -5,14 +5,16 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "ApplicationParameter", namespace = QuestionForm.NS)
 public class ApplicationParameter {
 
@@ -21,7 +23,6 @@ public class ApplicationParameter {
   @XmlElement(name = "Value", namespace = QuestionForm.NS)
   String value;
 
-  @XmlTransient
   public String getName() {
     return name;
   }
@@ -30,7 +31,6 @@ public class ApplicationParameter {
     this.name = name;
   }
 
-  @XmlTransient
   public String getValue() {
     return value;
   }
@@ -39,5 +39,4 @@ public class ApplicationParameter {
     this.value = value;
   }
 
-  
 }

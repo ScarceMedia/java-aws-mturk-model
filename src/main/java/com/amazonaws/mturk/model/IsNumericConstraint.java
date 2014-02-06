@@ -5,23 +5,24 @@
  */
 package com.amazonaws.mturk.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "IsNumeric", namespace = QuestionForm.NS)
-public class IsNumericConstraint extends Constraint {
+public class IsNumericConstraint implements Constraint {
 
   @XmlAttribute(name = "minValue", required = false)
   Integer minValue;
   @XmlAttribute(name = "maxValue", required = false)
   Integer maxValue;
 
-  @XmlTransient
   public Integer getMinValue() {
     return minValue;
   }
@@ -30,7 +31,6 @@ public class IsNumericConstraint extends Constraint {
     this.minValue = minValue;
   }
 
-  @XmlTransient
   public Integer getMaxValue() {
     return maxValue;
   }

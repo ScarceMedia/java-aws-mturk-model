@@ -20,17 +20,17 @@ import javax.xml.bind.Unmarshaller;
  *
  * @author Jeremy Custenborder
  */
-class SerializationHelper {
+public class SerializationHelper {
 
   public static boolean FORMAT_OUTPUT = false;
 
   public static void save(Object value, Writer writer) throws IOException {
     try {
       JAXBContext context = JAXBContext.newInstance(value.getClass());
-
-      Marshaller um = context.createMarshaller();
-      um.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, FORMAT_OUTPUT);
-      um.marshal(value, writer);
+      Marshaller m = context.createMarshaller();
+      m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, FORMAT_OUTPUT);
+      m.setProperty("com.sun.xml.bind.marshaller.CharacterEscapeHandler", CDataCharacterEscapeHandler.instance);
+      m.marshal(value, writer);
     } catch (JAXBException ex) {
       throw new IOException("Exception thrown while deserializing stream", ex);
     }

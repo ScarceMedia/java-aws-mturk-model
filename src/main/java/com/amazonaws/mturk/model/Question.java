@@ -7,15 +7,19 @@ package com.amazonaws.mturk.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlElements;
-import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Jeremy Custenborder
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name="Question", namespace=QuestionForm.NS)
 public class Question {
 
   @XmlElement(name = "QuestionIdentifier", namespace = QuestionForm.NS)
@@ -40,7 +44,6 @@ public class Question {
   @XmlElement(name = "AnswerSpecification", namespace = QuestionForm.NS)
   AnswerSpecification answerSpecification;
 
-  @XmlTransient
   public String getQuestionIdentifier() {
     return questionIdentifier;
   }
@@ -49,7 +52,6 @@ public class Question {
     this.questionIdentifier = questionIdentifier;
   }
 
-  @XmlTransient
   public List<Content> getQuestionContent() {
     return questionContent;
   }
@@ -58,7 +60,6 @@ public class Question {
     this.questionContent = questionContent;
   }
 
-  @XmlTransient
   public AnswerSpecification getAnswerSpecification() {
     return answerSpecification;
   }
@@ -67,7 +68,6 @@ public class Question {
     this.answerSpecification = answerSpecification;
   }
 
-  @XmlTransient
   public String getDisplayName() {
     return displayName;
   }
